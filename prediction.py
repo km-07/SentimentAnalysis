@@ -3,13 +3,8 @@
 # Import necessary modules
 import streamlit as st
 import numpy as np
-
-import tensorflow as tf
-from tensorflow.keras import preprocessing
-from PIL import Image
 import pickle
 import sklearn
-# from sklearn.externals import joblib
 import joblib
 
 def app():
