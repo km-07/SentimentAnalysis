@@ -22,8 +22,11 @@ def app():
         # load the model
         cv_path = 'Count_Vect.pkl'
         model_path = 'Model_LR.pkl'
-        loaded_cv = pickle.load(open(cv_path, 'rb'))
-        loaded_model = pickle.load(open(model_path, 'rb'))
+        with open(cv_path, 'rb') as file:  
+            loaded_cv = pickle.load(file)
+        
+        with open(model_path, 'rb') as file:  
+            loaded_model = pickle.load(file)
      
         topred = loaded_cv.transform(user_input_f)
         pred = loaded_model.predict(topred)
